@@ -53,7 +53,7 @@ class ResultTest {
 
     @Test
     void getResult() {
-        Result result = new Result();
+       Result result = new Result();
         Result result1 = new Result();
         assertTrue(result.getResult("/home/first/042017trud_2.csv", new IterCSV()
                 .getList("/home/first/042017trud_41.csv"))
@@ -61,6 +61,7 @@ class ResultTest {
                         .getList("/home/first/042017trud_41.csv"))));
         System.out.println(result.getResult("/home/first/exa2.csv", new IterCSV()
                 .getList("/home/first/exa1.csv")));
+
 
 
     }
