@@ -24,12 +24,12 @@ public class IterCSV {
                     String data = scanner.next();
 
 
-                    snilsFromSKL.setSnils(data);
+                    snilsFromSKL.setSnils((data.replaceAll("-", "")).replaceAll(" ", ""));
 
                 }
                 if (snilsFromSKL.toString() != null) {
                     list.add(Long.parseLong(((snilsFromSKL
-                            .toString()).replaceAll("-", "")).replaceAll(" ", "")));
+                            .toString()))));
 
                 }
 
