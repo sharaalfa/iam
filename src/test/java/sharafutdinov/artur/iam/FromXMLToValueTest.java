@@ -30,7 +30,7 @@ class FromXMLToValueTest{
 
         String s3 = "/home/first/pfr/" + count + ".XML";
         assertTrue(s3.equalsIgnoreCase("/home/first/pfr/1.XML"));
-        assertTrue(s.equalsIgnoreCase("16241019020"));
+        assertTrue(s.equalsIgnoreCase("16241018020"));
         assertTrue(s1.equalsIgnoreCase(""));
         assertNull(s2);
     }
