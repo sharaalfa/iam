@@ -1,6 +1,8 @@
 package sharafutdinov.artur.iam;
 
 
+import org.apache.log4j.Logger;
+
 import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -8,9 +10,22 @@ import java.util.Scanner;
 
 
 public class IterCSV {
+    /**
+     * Логгирование
+     */
+    private static final Logger log = Logger.getLogger(IterCSV.class);
 
+
+    /**
+     * модель списка
+     */
     private List<Long> list = new ArrayList<Long>();
 
+    /**
+     * создает список
+     * @param csvFile на вход принимает файл csv
+     * @return возвращает список
+     */
     public List<Long> getList(String csvFile) {
         try {
             BufferedReader readerOfSKL = new BufferedReader(new FileReader(csvFile));
@@ -41,7 +56,7 @@ public class IterCSV {
 
 
         } catch (IOException e) {
-            e.printStackTrace();
+            log.trace("формат " + csvFile);
         } return list;
     }
 

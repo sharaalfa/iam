@@ -1,9 +1,10 @@
 package sharafutdinov.artur.iam;
 
-/**
- * Created by first on 26.04.17.
- */
+
 public class SnilsFromSKL {
+    /**
+     * объект для передачи
+     */
     private String snils;
 
     public String getSnils() {

@@ -8,10 +8,10 @@ import org.apache.log4j.Logger;
 
 
 public class Runner implements Runnable {
+
     /**
      * Логгирование
      */
-
     private static final Logger log = Logger.getLogger(Runner.class);
     /**
      * лист для создания списков
@@ -43,8 +43,8 @@ public class Runner implements Runnable {
 
         try{
             for (int i = 1; i < 317; i++) {
-                System.out.println(i);
-                System.out.println(j);
+                System.out.println(i + ".XML");
+                System.out.println(j + ".csv");
                 list = new Result().
                         getResult("/home/first/snils" + j + ".csv", new Result()
                                 .getList(i, new Result().getIntegerList().get(i - 1)));
@@ -61,7 +61,7 @@ public class Runner implements Runnable {
             log.error("игнайт");
 
         }  catch (NumberFormatException e) {
-            log.trace("другой формат" + j);
+            log.trace("другой формат " + j + ".csv");
 
         } catch (Exception e) {
             log.error("соединение");
