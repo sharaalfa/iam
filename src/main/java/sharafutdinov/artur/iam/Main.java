@@ -1,30 +1,45 @@
 package sharafutdinov.artur.iam;
 
+import org.apache.ignite.IgniteException;
+import org.apache.log4j.Logger;
+
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
 
 public class Main {
+    /**
+     * Логгирование
+     */
 
-    private static List<Long> list = new ArrayList<>();
-
-    public static void main(String[] args) {
+    private static final Logger log = Logger.getLogger(Main.class);
 
 
+    /**
+     * Организация 36 отдельных потоков формирования
+     * списков из 36 файлов XML и перадача
+     * на сравнение с со списком из сыv
+     * @param args
+     * @throws SQLException
+     */
+    public static void main(String[] args) throws SQLException {
 
-        for (int i = 1; i < 317; ++i){
-            for (int j = 1; j < 37; ++j) {
-                System.out.println(i);
-                list = new Result().
-                        getResult("/home/first/snils" + j + ".csv", new Result()
-                                .getList(i, new Result().getIntegerList().get(i-1)));
-                System.out.println(list);
-                new WriterToDB()
-                        .setDB("artur", "12345", "example1", "data",
-                                "snils", list, new Result().getIntegerList().get(i-1));
 
-            }
+        for (int i = 1; i < 37; i++) {
+            Runner runner = new Runner();
+            runner.setJ(i);
+            new Thread(runner).start();
         }
+
+
+
+
+
+
+
+
+        //System.out.println(new Result().getList(1, 8243));
 
 
 
