@@ -27,7 +27,7 @@ public class Result {
      * @param m количество записей в файле XML
      * @return возращает список всех снилс конкретного файла XML
      */
-    public List<Long> getList(int count, long m) {
+    public synchronized List<Long> getList(int count, long m) {
 
         String path = "/home/first/pfr/" + count + ".XML";
 

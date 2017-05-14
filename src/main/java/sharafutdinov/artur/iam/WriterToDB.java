@@ -25,7 +25,7 @@ public class WriterToDB {
      * @param list список для выгрузки
      * @param n количество элементов списка
      */
-    public void setDB(String lgn,
+    public synchronized void setDB(String lgn,
                       String prd,
                       String db,
                       String tbl,

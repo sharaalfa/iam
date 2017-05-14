@@ -8,9 +8,6 @@ import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-/**
- * Created by first on 13.05.17.
- */
 class IterCSVTest {
     private List<Long> list = new ArrayList<>();
     @Test

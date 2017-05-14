@@ -4,9 +4,7 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-/**
- * Created by first on 14.05.17.
- */
+
 class RunnerTest {
     @Test
     void setJ() {
@@ -17,6 +15,7 @@ class RunnerTest {
 
     @Test
     void run() {
+
 
 
     }

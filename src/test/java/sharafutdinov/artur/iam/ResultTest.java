@@ -9,9 +9,7 @@ import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-/**
- * Created by first on 13.05.17.
- */
+
 class ResultTest {
     String openFile(String xmlFile) {
         final File file = new File(System.getProperty("user.dir")
@@ -61,7 +59,6 @@ class ResultTest {
                         .getList("/home/first/042017trud_41.csv"))));
         System.out.println(result.getResult("/home/first/exa2.csv", new IterCSV()
                 .getList("/home/first/exa1.csv")));
-
 
 
     }

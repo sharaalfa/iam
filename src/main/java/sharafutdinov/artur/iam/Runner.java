@@ -24,7 +24,7 @@ public class Runner implements Runnable {
      * сеттер вводимой переменной - имени файла XML
      * @param j
      */
-    public void setJ(int j) {
+    public synchronized void setJ(int j) {
         this.j = j;
     }
 
@@ -38,7 +38,7 @@ public class Runner implements Runnable {
      *
      */
 
-    public void run() {
+    public synchronized void run() {
 
 
         try{
@@ -46,7 +46,7 @@ public class Runner implements Runnable {
                 System.out.println(i + ".XML");
                 System.out.println(j + ".csv");
                 list = new Result().
-                        getResult("/home/first/snils" + j + ".csv", new Result()
+                        getResult("/home/first/snils/" + j + ".csv", new Result()
                                 .getList(i, new Result().getIntegerList().get(i - 1)));
 
                 new WriterToDB()

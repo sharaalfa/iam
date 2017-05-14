@@ -7,9 +7,6 @@ import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-/**
- * Created by first on 14.05.17.
- */
 class MainTest {
     private static List<Long> list = new ArrayList<>();
     @Test

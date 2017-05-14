@@ -6,9 +6,7 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-/**
- * Created by first on 13.05.17.
- */
+
 class FieldTest {
     @BeforeEach
     void setUp() {
