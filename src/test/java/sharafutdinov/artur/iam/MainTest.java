@@ -18,7 +18,7 @@ class MainTest {
                 getResult("/home/first/snils/38.csv", new Result()
                         .getList(318, 2));
 
-        new ReadXMLOfSnils()
+        new WriterToDB()
                 .setDB("artur", "12345", "example1", "data",
                         "snils", list, 2);
         assertNotNull(list, "ура");
