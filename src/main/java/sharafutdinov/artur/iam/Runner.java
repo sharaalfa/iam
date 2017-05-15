@@ -24,7 +24,7 @@ public class Runner implements Runnable {
      * сеттер вводимой переменной - имени файла XML
      * @param j
      */
-    public synchronized void setJ(int j) {
+    public void setJ(int j) {
         this.j = j;
     }
 
@@ -52,7 +52,6 @@ public class Runner implements Runnable {
                 new WriterToDB()
                         .setDB("artur", "12345", "example1", "data",
                                 "snils", list, new Result().getIntegerList().get(i - 1));
-                System.out.println(list);
             }
         } catch (NullPointerException e) {
             log.error("null");
