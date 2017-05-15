@@ -16,6 +16,7 @@ public class Result {
      * Создание списков для сравнения
      */
     private List<Long> result;
+    private List<Long> result1;
     private List<Long> list = new ArrayList<>();
     private List<Long> integerList = new ArrayList<>();
     private String value;
@@ -63,10 +64,12 @@ public class Result {
 
         try {
             result = new IterCSV().getList(data);
-            result.containsAll(list);
+            result.removeAll(list);
+            result1 = new IterCSV().getList(data);
+            result1.removeAll(result);
         } catch (NumberFormatException e) {
             log.error("непроверяемое исключение");
         }
-        return result;
+        return result1;
     }
 }

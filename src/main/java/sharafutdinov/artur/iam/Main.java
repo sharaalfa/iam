@@ -23,7 +23,7 @@ public class Main {
     public static void main(String[] args) throws SQLException {
 
 
-        for (int i = 3; i < 38; i++) {
+        for (int i = 1; i < 38; i++) {
             Runner runner = new Runner();
             runner.setJ(i);
             new Thread(runner).start();
