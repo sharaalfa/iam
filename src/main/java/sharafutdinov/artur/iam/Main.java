@@ -1,11 +1,8 @@
 package sharafutdinov.artur.iam;
 
-import org.apache.ignite.IgniteException;
-import org.apache.log4j.Logger;
 
+import org.apache.log4j.Logger;
 import java.sql.SQLException;
-import java.util.ArrayList;
-import java.util.List;
 
 
 public class Main {
@@ -19,7 +16,7 @@ public class Main {
     /**
      * Организация 37 отдельных потоков формирования
      * списков из 37 файлов XML и перадача
-     * на сравнение с со списком из сыv
+     * на сравнение с со списком из сsv
      * @param args
      * @throws SQLException
      */
@@ -31,17 +28,6 @@ public class Main {
             runner.setJ(i);
             new Thread(runner).start();
         }
-
-
-
-
-
-
-
-
-        //System.out.println(new Result().getList(1, 8243));
-
-
 
 
     }
