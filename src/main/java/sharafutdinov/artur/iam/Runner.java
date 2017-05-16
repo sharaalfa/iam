@@ -8,8 +8,16 @@ import org.apache.log4j.Logger;
 
 
 public class Runner implements Runnable {
-   List<Long> result;
+    /**
+     * макет списка из снилс XML
+     */
+    List<Long> result;
 
+
+    /**
+     * сеттер для списка снилс из XML
+     * @param result
+     */
     public void setResult(List<Long> result) {
         this.result = result;
     }

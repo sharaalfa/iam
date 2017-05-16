@@ -19,7 +19,7 @@ public class Result {
     private List<Long> result1;
     private List<Long> list = new ArrayList<>();
     private List<Long> integerList = new ArrayList<>();
-    private String value;
+    private volatile String value;
 
     /**
      * Создание списка по определенной файле XML номеров снилс,
