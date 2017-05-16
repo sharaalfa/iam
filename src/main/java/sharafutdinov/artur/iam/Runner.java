@@ -8,6 +8,11 @@ import org.apache.log4j.Logger;
 
 
 public class Runner implements Runnable {
+   List<Long> result;
+
+    public void setResult(List<Long> result) {
+        this.result = result;
+    }
 
     /**
      * Логгирование
@@ -17,6 +22,12 @@ public class Runner implements Runnable {
      * лист для создания списков
      */
     private List<Long> list = new ArrayList<>();
+
+    private int i;
+
+    public void setI(int i) {
+        this.i = i;
+    }
 
     private int j;
 
@@ -42,17 +53,15 @@ public class Runner implements Runnable {
 
 
         try{
-            for (int i = 1; i < 317; i++) {
-                System.out.println(i + ".XML");
-                System.out.println(j + ".csv");
-                list = new Result().
-                        getResult("/home/first/snils/" + j + ".csv", new Result()
-                                .getList(i, new Result().getIntegerList().get(i - 1)));
 
-                new WriterToDB()
-                        .setDB("artur", "12345", "example1", "data",
-                                "snils", list, new Result().getIntegerList().get(i - 1));
-            }
+            System.out.println(j + ".csv");
+            list = new Result().
+                    getResult("/home/first/snils/" + j + ".csv", result);
+
+            new WriterToDB()
+                    .setDB("artur", "12345", "example1", "data",
+                            "snils", list, list.size());
+
         } catch (NullPointerException e) {
             log.error("null");
 

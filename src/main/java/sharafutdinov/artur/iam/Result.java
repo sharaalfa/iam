@@ -28,11 +28,12 @@ public class Result {
      * @param m количество записей в файле XML
      * @return возращает список всех снилс конкретного файла XML
      */
-    public synchronized List<Long> getList(int count, long m) {
+    public List<Long> getList(int count, long m) {
 
         String path = "/home/first/pfr/" + count + ".XML";
 
         for (int j = 0; j < m; j++) {
+            System.out.println("порядковый номер снилс в XML " + j);
             value = new FromXMLToValue().val(path,
                     "zl", "Snils_pfr", j);
             if(value != null) {
