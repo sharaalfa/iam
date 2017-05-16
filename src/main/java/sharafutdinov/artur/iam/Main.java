@@ -11,20 +11,10 @@ public class Main {
 
 
     /**
-     * Логгирование
-     */
-
-    private static final Logger log = Logger.getLogger(Main.class);
-
-    private static List<Long> list = new ArrayList<>();
-
-
-    /**
      * Многопоточная обработка данных:
      * создаются потоки списков снилс из файлов XML,
      * cоздаются потоки на совпадения со снилс из csv файлов
      * @param args
-     * @throws SQLException
      */
     public static void main(String[] args) throws SQLException {
 
